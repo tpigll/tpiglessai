@@ -47,7 +47,7 @@
       <!-- Brand -->
       <a >
               
-                <img src="/img/logo1.png"  width="220 " height="230 ">
+      <img src="/img/logo.png"  width="210 " height="150 ">   
               
             </a>
       <!-- Divider -->
@@ -197,13 +197,13 @@
  @if($users->type=='1')
       <div class="row mt-3" >
 <div class="col-9 ml-4" >
-    <h2>afficher  planning</h2>
+    <h2>consulter notes</h2>
     </div>  
       <div class="col-1 mr-6" >
      
         <h5 class="modal-title text-white" id="exampleModalLabel">voir </h5>
         <button type="button" class=" btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal1" >
-          <span aria-hidden="true">Voir plus</span>
+          <span aria-hidden="true"> <a  href="calculmoy/1" >Voir plus</span>
         </button>
       </div>
       </div>

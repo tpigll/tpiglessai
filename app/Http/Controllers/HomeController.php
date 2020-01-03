@@ -31,4 +31,11 @@ class HomeController extends Controller
 
 
     }
+    public function api()
+    {
+        $data =[
+            'name'=>'hiu',
+        ];
+        return response()->json($data);
+    }
 }

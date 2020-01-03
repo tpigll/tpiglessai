@@ -12,7 +12,13 @@ class ProfilController extends Controller
         //
               return view('prof');
     }
-
+    public function api()
+    {
+        $data =[
+            'name'=>'hiu',
+        ];
+        return response()->json($data);
+    }
 
 
 }

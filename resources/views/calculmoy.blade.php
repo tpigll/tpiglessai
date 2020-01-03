@@ -1,18 +1,31 @@
-consulter notes <br>
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+    
+
 {{csrf_field()}}
 nom : {{$user->name}} <br>
 @php
 $var=1
 @endphp
- @foreach($notes as $note)
- <!--{{$note->mod}}   {{$note->interro}}  {{$note->ci}}  {{$note->ef}} -->  <br>
 
-@if( $var =='1')
- {{ App\Module::where('userid', '=', $user->id)->pluck('mod')  }} <br>
- {{ App\Module::where('userid', '=', $user->id)->pluck('interro')  }} <br>
- {{ App\Module::where('userid', '=', $user->id)->pluck('ci')  }} <br>
- {{ App\Module::where('userid', '=', $user->id)->pluck('ef')  }} <br>
- {{ App\Module::where('userid', '=', $user->id)->pluck('moy')  }} <br>
+   notes globales:   {{$moy->mod1}} {{$moy->cof1}}
+
+<div>
+nom modules : {{$notes->mod}}
+
+@foreach($notes as $note)
+ nom modules : {{$notes->mod}}
+@endforeach
 
 @php
  $coftotal=($moy->cof1)+($moy->cof2)+($moy->cof3)
@@ -39,5 +52,10 @@ $var=1
  $var=0 
  @endphp
 
- @endif
-@endforeach
+
+
+
+
+</body>
+</html>
+<consulter notes <br>

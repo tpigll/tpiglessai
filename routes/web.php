@@ -43,4 +43,5 @@ Route::get('/deconnexion','Controller@dec')->name('deconnexion');
 Route::resource('/prof','ProfilController');
 //Route::get('/calculmoy','NoteController@show');
 Route::resource('/calculmoy','NoteController');
-
+Route::resource('/moy','NoteController');
+Route::resource('/essai','EssaiController');

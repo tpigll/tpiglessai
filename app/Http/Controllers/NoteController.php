@@ -20,7 +20,8 @@ class NoteController extends Controller
         //*
         $id=1;
         $moy=Note::find($id);
-       $notes=Module::all();
+        //$notes=Module::where('userid','=',$id);
+      $notes =Module::find($id);
       $user=User::find($id);
 
       //  $notes = Module::where('userid', '=', '1');
@@ -63,8 +64,14 @@ class NoteController extends Controller
     public function show( $id)
     {
         //
-        $moys=Note::find($id);
-        return view('/calculmoy')->with('moy',$moys);
+       // $moys=Note::find($id);
+       $use=User::all();
+      // $moys=Note::all();
+       $moy=Note::where('userid','=',$id);
+      // $nt=Module::all();
+       $notes=Module::where('userid','=',$id);
+       // return view('/calculmoy')->with('moy',$moys);
+       return view('/calculmoy',compact('moy','notes','use'));
 
        
     }
@@ -101,5 +108,12 @@ class NoteController extends Controller
     public function destroy(Note $note)
     {
         //
+    }
+    public function api()
+    {
+        $data =[
+            'name'=>'hiu',
+        ];
+        return response()->json($data);
     }
 }

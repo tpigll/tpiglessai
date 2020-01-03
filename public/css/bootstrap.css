@@ -3439,6 +3439,9 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   width: 1%;
   margin-bottom: 0;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .input-group > .form-control + .form-control,
@@ -3844,6 +3847,9 @@ input[type="button"].btn-block {
   height: calc(2.25rem + 2px);
   margin: 0;
   opacity: 0;
+  border: 1px solid #ced4da;
+  border-radius: 15px 50px 30px 5px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .custom-file-input:focus ~ .custom-file-label {

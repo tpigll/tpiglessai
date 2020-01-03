@@ -6,7 +6,7 @@ header,
 }
 
 #intro {
-    background: url("../img/cover1.jpg")no-repeat center center fixed;
+    background: url("../img/igl.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,12 +15,13 @@ header,
 #intro1
 {
 height: 108%;
-background: url("../img/cover1.jpg")no-repeat center center fixed;
+background: url("../img/igl.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
 #lis
 {
 color: #f7f6f6; font-family: roboto; font-size: 17px;
@@ -51,7 +52,41 @@ background-color: #ffffff; outline:none ;
     bottom :-5px;
     LEFT:-18px;
 }
-.label 
-{
-    color:black;
+.dropdown-item.dropdown-notification:active, .dropdown-item.dropdown-notification.active {
+ 
+  text-decoration: none;
+  background-color: #f7f7f9;
+}
+.dropdown-notification-all {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-style: oblique;
+ 
+  color: white;
+}
+
+.dropdown-notification-all:hover {
+ 
+  color: white;
+}
+
+.notifications-container {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.notification-dropdown-menu {
+  padding-bottom: 0;
+  min-width: 528px;
+}
+
+
+.notifications-body {
+  display: inline-block;
+}
+
+.notificationTexte {
+  text-align: left;
+  margin: 0;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
   <meta charset="utf-8">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,6 +30,9 @@
         </head>
 
   <body style ="background-color:#FDF9F1;">
+  <div id="app">
+  
+<articles>
 
 <!-- Sidenav -->
   <nav class="navbar navbar-vertical fixed-left navbar-expand-md  " id="sidenav-main" >
@@ -38,10 +41,12 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Brand -->
-      <a class="navbar-brand pt-0">
-        <img src="./assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-      </a>
+      <!-- Brand /img/logo1.png-->
+      <a >
+              
+      <img src="/img/logo.png"  width="210 " height="150 ">   
+            
+          </a>
       <!-- Divider -->
         <hr class="my-3">
       <!-- Collapse -->
@@ -92,29 +97,26 @@
     </div>
   </nav>
 <div class="main-content">
- <nav class="navbar navbar-top navbar-expand-md " id="navbar-main">
+<nav class="navbar navbar-top navbar-expand-md " id="navbar-main">
       <div class="container-fluid">
 
 
-</a>
-        <ul class="navbar-nav align-items-center d-none d-md-flex">
-        <li class="  dropdown mr--2">
+<ul class="navbar-nav align-items-center d-none d-md-flex ml-2 ">
+        <li class="dropdown-notification-all ml-2 ">
              <a   id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-             <i  class="fas fa-bell fa-2x" style="color:#111721;"></i> 
-                  <span class=" badge badge-danger ml-2" id="badge-notify"> </span> 
+            
               </a>
-             <ul class="dropdown-menu  dropdown-menu-arrow  " aria-labelledby="notificationsMenu" id="notificationsMenu" >
+             <ul class="dropdown-menu ml-4 dropdown-menu-arrow" aria-labelledby="notificationsMenu" id="notificationsMenu" >
                     <li class="dropdown-header"  > <a href ="#"><span>No notifications</span> </a></li>
                  </ul>
           </li>
-          <li class="">
+          </ul> 
+         
           <a >
              <i  class="fas fa-question-circle fa-2x" style="color:#111721;" data-toggle="modal" data-target="#modal-default"></i> 
               </a> 
            
-           
-    </nav>     
-  
+    </nav> 
     <div class="header  pb-8 pt-5 pt-md-8"  >
 </div>
           <div class="container-fluid mt--8">
@@ -127,6 +129,14 @@
               <div class="card-profil-image-center mt-4 ">
                   <a href="">
                   
+                  <img   
+                  src="/img/av.png" 
+                  style="overflow:hidden;
+                  -webkit-border-radius:50px;
+                   -moz-border-radius:50px;
+                   border-radius:80px;
+                   width:160px;
+                   height:160px;"> 
                   </a>
                   
                 </div>
@@ -141,15 +151,13 @@
                 </h3>
               </div>
             </div>
-            
+            <form   enctype="multipart/form-data"  method="post">
              {{ csrf_field() }}
              <div class="row">
            <div class="col-2"></div>
-            <label class=" col-8 btn btn-outline-dark btn-file " >
-                Choisir une photo <input type="file" style="display: none;" name="image">
-            </label> <div class="col-2"></div></div> 
+            <div class="col-2"></div></div> 
             <div class="row"><div class="col-4"></div>
-            <button class="btn btn-outline-dark  col-4" > Enregistrer </button>
+            <label  class="  mb-4 display-4" style=" color:#263238;" >Nom Prenom</label>
             <div class="col-4"></div></div>
              </form>
           </div>
@@ -159,13 +167,19 @@
          
               <div class="row align-items-center" >
                 <div class="col-8">
-                  <h4 class="text-nowrap display-4 mt-3 ml-3"style="color:#263238;"   > <span class="font-weight-light"></span>Changer mot de passe </h4>
-                  
-                  
-                  </div>
+              </div>
                   <hr style="weight:50px;" />
                   </div>
-      
+
+
+      <div class="card-body">
+      <form  method="post" enctype="multipart/form-data">
+   </div>
+          <div class=" row ">
+          <div class=" col-4 "></div>
+           </div>
+       </form>
+      </div>
       </div>
 
 
@@ -183,6 +197,9 @@
               </div>
             </div>
             <div class="card-body">
+              <form 
+              
+                method="post" enctype="multipart/form-data" >
               {{ csrf_field() }}
               <label class="  mb-4 display-4" style=" color:#263238;">Information personnel</label> 
                 <div class="pl-lg-4">
@@ -190,18 +207,35 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="text-nowrap" style="color:#777474;" for="input-first-name">Nom</label>
-                        <input  name="nom" type="text" id="input-first-name" class="  form-control"style="border-radius:30px;"  >
+                        <input  name="nom" type="text" id="input-first-name" class="  form-control"style="border-radius:30px;"  value="">
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label  class="text-nowrap" style="color:#777474;" for="input-last-name">Prenom</label>
-                        <input name="prenom" type="text" id="input-last-name" class=" form-control "  style="border-radius:30px;">
+                        <input name="prenom" type="text" id="input-last-name" class=" form-control "  style="border-radius:30px;" value="">
                       </div>
                     </div>
                   </div>
                   </div>
-                  
+                  <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="text-nowrap" style="color:#777474;" for="input-first-name">Groupe</label>
+                        <input name="annee" type="text" id="input-last-name" class=" form-control "  style="border-radius:30px;" value="">
+                         
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label  class="text-nowrap" style="color:#777474;" for="input-last-name">Section</label>
+                        <input name="annee" type="text" id="input-last-name" class=" form-control "  style="border-radius:30px;" value="">
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                
                   
                 
                 <hr class="my-4" />
@@ -212,28 +246,21 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="text-nowrap" style="color:#777474;" for="input-email">Adresse Mail</label>
-                        <input name="email" type="email" id="input-email" class=" form-control "  style="border-radius:30px;"  disabled >
+                        <input name="email" type="email" id="input-email" class=" form-control "  style="border-radius:30px;" value="" disabled >
                       </div>
                     </div>
                     
                   </div>
                 </div>
-                <hr class="my-4" />
-                <!-- Description -->
-                <label class="  mb-4 display-4" style="color:#263238;">Description </label >
-                <div class="pl-lg-4">
-                  <div class="form-group">
-                    <textarea name="description" rows="4" class="form-control " ></textarea>
-                  </div>
+               
+                
                 </div>
                 <div class="row">
                 <div class="col-4 text-right">
-          <label class="btn btn-outline-dark    "style="background-color: #264456;" onClick="show();">
-                Changer le mot de passe 
-            </label></div>
+          </div>
             <div class="col-3 text-right"></div>
                 <div class="col-4 text-right">
-                  <button  class="btn btn-outline-dark"  >Editer le compte</button>
+                  
                 </div></div>
               </form>
             </div>
@@ -241,7 +268,14 @@
         </div>
       </div>
    
-
+      <footer>
+          <div class="container-fluid">
+          <div class="footer-copyright  row  py-3 grey-text" style=" font-family: marmelad;"> 
+      <a class="col-10"> ESI © 2019-2020 </a>
+      <a class="col-2 uppercase text-muted display ">e-Scolarité</a>
+    </div>
+          </div>
+          </footer> 
 
 
 
@@ -265,19 +299,12 @@
 
 
 
-<footer>
-          <div class="container-fluid">
-          <div class="footer-copyright  row  py-3 grey-text" style=" font-family: marmelad;"> 
-      <a class="col-11"> ESI © 2018-2019 </a>
-      <a class="col-1 uppercase text-muted display " >Takharroudj</a>
-    </div>
-          </div>
-          </footer> 
+
 
           <div class="row mt-5"></div>
            <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true" >
     <div class="modal-dialog modal- modal-dialog-centered modal-" role="document"  >
-        <div class="modal-content" style="background-color:#F29703; opacity= 0.5;">
+        <div class="modal-content" style="background-color:#ffb74d; opacity= 0.5;">
           
             <div class="modal-header">
                 <h5 class="modal-title" id="modal-title-default" style="color:#111721;"></h5>
@@ -297,23 +324,23 @@
   
             
 
-            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Consulter vos projets en cliquant sur :</h4></div>
+            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Consulter vos projets </h4></div>
    <div class="col-2 text-CENTER mb-3"><a href="#!" class="fas fa-project-diagram fa-2x"style="color: #111721;" ></a>
             </div>
-            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Consulter vos réunions en cliquant sur :</h4></div>
+            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Consulter vos réunions </h4></div>
    <div class="col-2 text-CENTER mb-3"><a href="#!" class="fas fa-edit fa-2x " style="color: #111721;" ></a>
             </div>
-            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Mettre votre avancement  en cliquant sur :</h4></div>
+            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Mettre votre avancement </h4></div>
    <div class="col-2 text-CENTER mb-3"><a href="#!" class="fas fa-chart-line fa-2x "style="color: #111721;" ></a>
             </div>
           
-            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Consulter les commentaires en cliquant sur :</h4></div>
+            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Consulter les commentaires </h4></div>
    <div class="col-2 text-CENTER mb-3"><a href="#!" class="fas fa-comment-dots fa-2x " style="color: #111721;"></a>
             </div>
-            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Déposer un livrable en cliquant sur :</h4></div>
+            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Déposer un livrable </h4></div>
    <div class="col-2 text-CENTER mb-3"><a href="#!" class="fas fa-check-circle fa-2x "style="color: #111721;" ></a>
             </div>
-            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Modifier votre profil en cliquant sur :</h4></div>
+            <div class=" col-10 text-LEFT mb-3"><h4 style="color:#111721;">- Modifier votre profil </h4></div>
    <div class="col-2 text-CENTER mb-3"><a href="#!" class="fas fa-cogs fa-2x "style="color: #111721;" ></a>
             </div>
             </div>
@@ -326,6 +353,10 @@
 
 
 
+
+            </articles>        
+                </div >
+                 
 
 
  <!-- Scripts -->
